@@ -1,49 +1,69 @@
 # Source Serif Pro
 
-Source Serif Pro is a set of OpenType fonts to complement the [Source Sans Pro](https://github.com/adobe-fonts/source-sans-pro) family. 
-In addition to a functional OpenType font, this open source project provides all of the source files that were used to build this OpenType font by using the AFDKO makeotf tool.
+Source Serif Pro is a set of OpenType fonts to complement the [Source Sans Pro](https://github.com/adobe-fonts/source-sans-pro) family.
 
-## Download the fonts (OTF, TTF, WOFF, EOT)
+## Web font installation instructions
 
-* [Latest release](../../releases/latest)
-* [All releases](../../releases)
-
-## Font installation instructions
-
-* [Mac OS X](http://support.apple.com/kb/HT2509)
-* [Windows](http://windows.microsoft.com/en-us/windows-vista/install-or-uninstall-fonts)
-* [Linux/Unix-based systems](https://github.com/adobe-fonts/source-code-pro/issues/17#issuecomment-8967116)
-
-## Building the fonts from source
-
-### Requirements
-
-To build the binary font files from source, you need to have installed the
-[Adobe Font Development Kit for OpenType](http://www.adobe.com/devnet/opentype/afdko.html) (AFDKO). The AFDKO
-tools are widely used for font development today, and are part of most font
-editor applications.
-
-### Building one font
-
-The key to building OTF or TTF fonts is `makeotf`, which is part of the AFDKO toolset.  
-Information and usage instructions can be found by executing `makeotf -h`.
-
-In this repository, all necessary files are in place for building the OTF and TTF fonts.  
-For example, build a binary OTF font for the Regular style like this:
+### Clone with git
 
 ```sh
-$ cd Roman/Regular/
-$ makeotf -r
+cd styles/fonts
+git clone https://github.com/barberboy/source-serif-pro
 ```
 
-### Building all fonts
+```html
+<link rel="stylesheet" href="/styles/fonts/source-serif-pro/source-serif-pro.css">
+```
 
-For convenience, a shell script named `build.sh` is provided in the root directory.  
-It builds all OTFs and TTFs, and can be executed by typing:
+
+### Download
+
+Download and unpack the [.zip archive](https://github.com/barberboy/source-serif-pro/archive/master.zip):
 
 ```sh
-$ ./build.sh
+cd styles/fonts
+wget https://github.com/barberboy/source-serif-pro/archive/master.zip
+unzip master.zip
+mv source-serif-pro-master source-serif-pro
+rm master.zip
 ```
+
+```html
+<link rel="stylesheet" href="/styles/fonts/source-serif-pro/source-serif-pro.css">
+```
+
+
+### Bower
+
+```sh
+bower install barberboy/source-serif-pro
+```
+
+```html
+<link rel="stylesheet" href="/bower_components/source-serif-pro/source-serif-pro.css">
+```
+
+If you’d like bower to put it in a different directory, just create a
+[`.bowerrc`](http://bower.io/docs/config/) file and specify the
+[`directory`](http://bower.io/docs/config/#directory) location:
+
+```json
+{
+  "directory": "app/public",
+  "analytics": false
+}
+```
+
+### CDN
+
+Quickly test Source Code Pro on your site by using the CDN hosted by [RawGit].
+Feel free to use it in production as well:
+
+```html
+<link rel="stylesheet" href="https://cdn.rawgit.com/barberboy/source-serif-pro/1.014/source-serif-pro.css">
+```
+
+[RawGit]: https://rawgit.com/
 
 ## Getting Involved
 
@@ -52,3 +72,4 @@ Send suggestions for changes to the Source Serif OpenType font project maintaine
 ## Further information
 
 For information about the design and background of Source Serif, please refer to the [official font readme file](http://htmlpreview.github.io/?https://github.com/adobe-fonts/source-serif-pro/blob/master/SourceSerifProReadMe.html).
+
